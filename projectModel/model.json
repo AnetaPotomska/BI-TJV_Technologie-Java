@@ -1,0 +1,219 @@
+{
+  "entities": [
+    {
+      "name": "Course",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_course",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "description",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "max_capacity",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 467,
+        "y": 193.60000610351562,
+        "width": 136,
+        "height": 120
+      }
+    },
+    {
+      "name": "Student",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_student",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "first_name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "last_name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "class_name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 227,
+        "y": 196.60000610351562,
+        "width": 125,
+        "height": 119.36668395996094
+      }
+    },
+    {
+      "name": "Study_material",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_study_material",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "author_name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "content",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 695,
+        "y": 192.60000610351562,
+        "width": 130.98333740234375,
+        "height": 122
+      }
+    }
+  ],
+  "relations": [
+    [
+      {
+        "entity": "Course",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 467,
+            "y": 253.60000610351562,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 409.5,
+              "y": 253.10000610351562
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Student",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "attends",
+        "transform": {
+          "anchor": {
+            "x": 352,
+            "y": 252.60000610351562,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 409.5,
+              "y": 253.10000610351562
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Course",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "has",
+        "transform": {
+          "anchor": {
+            "x": 603,
+            "y": 253.60000610351562,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 649,
+              "y": 253.60000610351562
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Study_material",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 695,
+            "y": 253.60000610351562,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 649,
+              "y": 253.60000610351562
+            }
+          ],
+          "manual": false
+        }
+      }
+    ]
+  ],
+  "notes": []
+}
